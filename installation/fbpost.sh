@@ -16,7 +16,7 @@ cd /data/data/com.termux/files/usr/lib/python3.*/
 wget https://raw.githubusercontent.com/bcoder909/fbpost/main/binaries/for-termux/${bit}bit/fbpost.so
 clear
 chmod 777 /data/data/com.termux/files/usr/lib/python3.*/fbpost.so
-rm -rf ${FILE} && touch ${FILE} && echo 'python -m fbpost' >> ${FILE}
+rm -rf ${FILE} && touch ${FILE} && echo 'python -m fbpost.so' >> ${FILE}
 chmod 777 ${FILE}
 clear
 cd ${path}
