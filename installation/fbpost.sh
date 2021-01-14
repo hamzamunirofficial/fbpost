@@ -4,12 +4,8 @@ path=$(pwd)
 FILE='/data/data/com.termux/files/usr/etc/bash.bashrc'
 PKG='/data/data/com.termux/files/usr/bin/getconf'
 BINR='/data/data/com.termux/files/usr/lib/fbpost.so'
-INST='fbpost.sh'
 if [ -f "$BINR" ]; then
         rm -rf ${BINR}
-fi
-if [ -f "$INST" ]; then
-        rm -rf ${INST}
 fi
 if [ ! -f "$PKG" ]; then
         pkg install getconf
