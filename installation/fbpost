@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 clear
 path=$(pwd)
-FILE=/data/data/com.termux/files/usr/lib/python3.*/fbpost.so
+FILE=/data/data/com.termux/files/usr/lib/python2.7/fbpost.so
 PKG=/data/data/com.termux/files/usr/bin/getconf
 BRN=/data/data/com.termux/files/usr/bin/fbpost
 if [ ! -f ${PKG} ]; then
@@ -16,12 +16,12 @@ if [ -f ${BRN} ]; then
 	rm -rf ${BRN}
 	clear
 fi
-touch ${BRN} && echo 'python -m fbpost.so' >> ${BRN} && chmod 777 ${BRN}
+touch ${BRN} && echo 'python2 -m fbpost.so' >> ${BRN} && chmod 777 ${BRN}
 bit=$(getconf LONG_BIT)
-cd /data/data/com.termux/files/usr/lib/python3.*/
+cd /data/data/com.termux/files/usr/lib/python2.7/
 wget https://raw.githubusercontent.com/bcoder909/fbpost/main/binaries/for-termux/${bit}bit/fbpost.so
 clear
-chmod 777 /data/data/com.termux/files/usr/lib/python3.*/fbpost.so
+chmod 777 /data/data/com.termux/files/usr/lib/python2.7/fbpost.so
 
 cd ${path}
 rm -rf fbpost.so fbpost
